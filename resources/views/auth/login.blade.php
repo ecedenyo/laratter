@@ -60,6 +60,12 @@
                                 </a>
                             </div>
                         </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-8 offset-md-4">
+                                <a href="/auth/facebook" class="btn btn-primary">Login con Facebook</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
