@@ -30,6 +30,8 @@ Route::get('/auth/facebook/callback', 'SocialAuthController@callback');
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/messages', 'MessagesController@search');
+
 Route::get('/{username}/follows', 'UsersController@follows');
 Route::get('/{username}/followers', 'UsersController@followers');
 Route::post('/{username}/follow', 'UsersController@follow');
