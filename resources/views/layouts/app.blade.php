@@ -34,7 +34,7 @@
                         <li class="nav-item">
                             <form action="/messages">
                                 <div class="input-group">
-                                    <input type="text" name="query" class="form-control" required placeholder="Qué deseas …">
+                                    <input type="text" name="query" class="form-control" required placeholder="Qué deseas …" value="{{ $query }}">
                                     <span class="input-group-btn"><button class="btn btn-outline-success">Buscar</button></span>
                                 </div>
                             </form>
