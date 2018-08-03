@@ -9,7 +9,7 @@ class UsersController extends Controller
 {
     public function show($username)
     {
-    	throw new Exception("Error Processing Request", 1);        
+    	//throw new Exception("Error Processing Request", 1);        
 
         $user = $this->findByUsername($username);
 
