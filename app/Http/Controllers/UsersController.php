@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Conversation;
+use App\PrivateMessage;
 use App\User;
+use Illuminate\Http\Request;
+//use Exception;
 
 class UsersController extends Controller
 {
     public function show($username)
     {
-    	//throw new Exception("Error Processing Request", 1);        
+    	/**
+         * NOTE2ME: en la clase de 'Mostrar Mensajes en la Aplicación' 
+         * Guido no tiene esta línea en su código ...
+         */
+        //throw new Exception("Error Processing Request", 1); 
 
         $user = $this->findByUsername($username);
 
@@ -63,5 +70,33 @@ class UsersController extends Controller
     private function findByUsername($username)
     {
         return User::where('username', $username)->firstOrFail();
+    }
+
+    public function sendPrivateMessage($username, Request $request)
+    {
+        $user = $this->findByUsername($username);
+
+        $me = $request->user();
+        $message = $request->input('message');
+
+        $conversation = Conversation::between($me, $user);
+
+        $privateMessage = PrivateMessage::create([
+            'conversation_id' => $conversation->id,
+            'user_id' => $me->id,
+            'message' => $message,
+        ]);
+
+        return redirect('/conversations/'.$conversation->id);
+    }
+
+    public function showConversation(Conversation $conversation)
+    {
+        $conversation->load('users', 'privateMessages');
+
+        return view('users.conversation', [
+            'conversation' => $conversation,
+            'user' => auth()->user(),
+        ]);
     }
 }
