@@ -1,6 +1,6 @@
 <template>
 	<div class="row">
-		<a href="" v-on:click="load">Ver respuestas</a>
+		<a href="#" v-on:click="load">Ver respuestas</a>
 
 		<div class="card" v-for="response in responses">
 			{{ response.message }}
@@ -14,15 +14,14 @@ export default {
 	data() {
 		return {
 			responses: []
-		},
-
-		methods: {
-			load() {
-				axios.get('/api/messages/' + this.messages + '/responses')
-					.then(res => {
-						this.responses = res.data
-					});
-			}
+		}
+	},
+	methods: {
+		load() {
+			axios.get('/api/messages/' + this.messages + '/responses')
+				.then(res => {
+					this.responses = res.data
+				});
 		}
 	}
 }
