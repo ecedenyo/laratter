@@ -13891,7 +13891,7 @@ window.Vue = __webpack_require__(36);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', __webpack_require__(39));
+Vue.component('responses', __webpack_require__(39));
 
 var app = new Vue({
   el: '#app'
@@ -47192,7 +47192,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/ExampleComponent.vue"
+Component.options.__file = "resources/assets/js/components/Responses.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -47201,9 +47201,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7168fb6a", Component.options)
+    hotAPI.createRecord("data-v-a3e289aa", Component.options)
   } else {
-    hotAPI.reload("data-v-7168fb6a", Component.options)
+    hotAPI.reload("data-v-a3e289aa", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -47324,32 +47324,9 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 /* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
+throw new Error("Module build failed: SyntaxError: Unexpected token, expected ; (18:9)\n\n\u001b[0m \u001b[90m 16 | \u001b[39m\t\t}\u001b[33m,\u001b[39m\n \u001b[90m 17 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 | \u001b[39m\t\tmethods\u001b[33m:\u001b[39m {\n \u001b[90m    | \u001b[39m\t\t       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 | \u001b[39m\t\t\tload() {\n \u001b[90m 20 | \u001b[39m\t\t\t\taxios\u001b[33m.\u001b[39mget(\u001b[32m'/api/messages/?/responses'\u001b[39m)\n \u001b[90m 21 | \u001b[39m\t\t\t\t\t\u001b[33m.\u001b[39mthen(res \u001b[33m=>\u001b[39m {\u001b[0m\n");
 
 /***/ }),
 /* 42 */
@@ -47359,38 +47336,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card card-default" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
-          ])
+  return _c(
+    "div",
+    { staticClass: "row" },
+    [
+      _c("a", { attrs: { href: "" }, on: { click: _vm.load } }, [
+        _vm._v("Ver respuestas")
+      ]),
+      _vm._v(" "),
+      _vm._l(_vm.responses, function(response) {
+        return _c("div", { staticClass: "card" }, [
+          _vm._v("\n\t\t" + _vm._s(response.message) + "\n\t")
         ])
-      ])
-    ])
-  }
-]
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-7168fb6a", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-a3e289aa", module.exports)
   }
 }
 

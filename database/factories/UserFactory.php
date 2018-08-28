@@ -32,3 +32,12 @@ $factory->define(App\Message::class, function (Faker $faker) {
         'updated_at' => $faker->dateTimeThisDecade,
 	];
 });
+
+$factory->define(App\Response::class, function (Faker\Generator $faker) 
+{
+    return [
+        'message' => $faker->words(3, true),
+        'created_at' => $faker->datetimeThisYear,
+        'updated_at' => $faker->datetimeThisYear,
+    ];
+});
