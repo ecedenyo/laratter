@@ -34,8 +34,8 @@
                         <li class="nav-item">
                             <form action="/messages">
                                 <div class="input-group">
-                                    <input type="text" name="query" class="form-control" required placeholder="Qué deseas …" value="{{ (!empty($query)) ? $query : '' }}">
-                                    <span class="input-group-btn"><button class="btn btn-outline-success">Buscar</button></span>
+                                    <input type="text" name="query" class="form-control" required placeholder="@lang('app.search_placeholder') …" value="{{ (!empty($query)) ? $query : '' }}">
+                                    <span class="input-group-btn"><button class="btn btn-outline-success">{{ trans('app.search') }}</button></span>
                                 </div>
                             </form>
                         </li>
@@ -43,10 +43,16 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        @if(App::getLocale() == 'es')
+                            <a href="/locale?lang=en" class="nav-link">EN</a>
+                        @else
+                            <a href="/locale?lang=es" class="nav-link">ES</a>
+                        @endif
+
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('app.login') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('app.signup') }}</a></li>
                         @else
                             <li class="nav-item dropdown mr-2">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">

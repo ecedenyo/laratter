@@ -20,6 +20,7 @@ Route::get('/acerca', 'PagesController@acerca'); */
 Route::get('/benvenuto', 'PagesController@benvenuto'); */
 
 Route::get('/messages/{message}', 'MessagesController@show');
+Route::get('/locale', 'PagesController@locale');
 
 Auth::routes();
 Route::get('/auth/facebook', 'SocialAuthController@facebook');
