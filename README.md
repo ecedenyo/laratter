@@ -14,7 +14,7 @@ En el mismo se abarcan los siguientes componentes:
 
 
 ## Origen
-**Laratter** es el proyecto del [Curso de PHP con Laravel](https://platzi.com/cursos/curso-php-laravel/), de la [Carrera de Desarrollo Backend con PHP](https://platzi.com/desarrollo-php/) de la plataforma educacional online [Platzi](https://platzi.com/).
+**Laratter** es el proyecto del [Curso de PHP con Laravel](https://platzi.com/cursos/curso-php-laravel-2017/), de la [Carrera de Desarrollo Backend con PHP](https://platzi.com/desarrollo-php/) de la plataforma educacional online [Platzi](https://platzi.com/).
 
 
 ## Componentes
