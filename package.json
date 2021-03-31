@@ -14,7 +14,7 @@
         "axios": "^0.21",
         "bootstrap": "^4.3.1",
         "cross-env": "^5.1",
-        "jquery": "^3.4",
+        "jquery": "^3.5",
         "laravel-echo": "^1.4.0",
         "laravel-mix": "^2.1.14",
         "lodash": "^4.17.19",
